@@ -1,0 +1,402 @@
+{
+ "model": "hyb_alt64",
+ "repo": "(new) hybrid: GRU + local/global attention stack",
+ "target_repo": "LM_Dec_Long_HybridAlt_W64",
+ "category": "Long",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7 + torch.nn",
+ "unified": [
+  "GRU, then 6 single layers alternating sliding-window-64 RoPE and global NoPE (L G L G L G)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 4090",
+ "stage": "lm06s2",
+ "started": "2026-11-24 12:54:22",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 1.7182934284210205,
+ "minutes": 5.1,
+ "history": [
+  {
+   "step": 500,
+   "loss": 4.16504430770874,
+   "acc": 0.01171875,
+   "acc_updated": 0.015625,
+   "acc_unchanged": 0.0078125,
+   "stale_rate": 0.0,
+   "by_distance": {
+    "0-256": [
+     0.0,
+     23
+    ],
+    "256-1024": [
+     0.013,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 1000,
+   "loss": 3.198087215423584,
+   "acc": 0.19140625,
+   "acc_updated": 0.3359375,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0390625,
+   "by_distance": {
+    "0-256": [
+     0.174,
+     23
+    ],
+    "256-1024": [
+     0.193,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 1500,
+   "loss": 2.775416612625122,
+   "acc": 0.296875,
+   "acc_updated": 0.53125,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0078125,
+   "by_distance": {
+    "0-256": [
+     0.304,
+     23
+    ],
+    "256-1024": [
+     0.296,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 2000,
+   "loss": 2.448239326477051,
+   "acc": 0.32421875,
+   "acc_updated": 0.5859375,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.015625,
+   "by_distance": {
+    "0-256": [
+     0.522,
+     23
+    ],
+    "256-1024": [
+     0.305,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 2500,
+   "loss": 2.2324066162109375,
+   "acc": 0.35546875,
+   "acc_updated": 0.6171875,
+   "acc_unchanged": 0.09375,
+   "stale_rate": 0.015625,
+   "by_distance": {
+    "0-256": [
+     0.565,
+     23
+    ],
+    "256-1024": [
+     0.335,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 3000,
+   "loss": 2.094874382019043,
+   "acc": 0.3671875,
+   "acc_updated": 0.6484375,
+   "acc_unchanged": 0.0859375,
+   "stale_rate": 0.0,
+   "by_distance": {
+    "0-256": [
+     0.478,
+     23
+    ],
+    "256-1024": [
+     0.356,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 3500,
+   "loss": 2.082953691482544,
+   "acc": 0.39453125,
+   "acc_updated": 0.75,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.0,
+   "by_distance": {
+    "0-256": [
+     0.739,
+     23
+    ],
+    "256-1024": [
+     0.361,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 4000,
+   "loss": 2.094953775405884,
+   "acc": 0.32421875,
+   "acc_updated": 0.5859375,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.015625,
+   "by_distance": {
+    "0-256": [
+     0.478,
+     23
+    ],
+    "256-1024": [
+     0.309,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 4500,
+   "loss": 2.1263630390167236,
+   "acc": 0.35546875,
+   "acc_updated": 0.6640625,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0078125,
+   "by_distance": {
+    "0-256": [
+     0.783,
+     23
+    ],
+    "256-1024": [
+     0.313,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 5000,
+   "loss": 1.9828288555145264,
+   "acc": 0.390625,
+   "acc_updated": 0.703125,
+   "acc_unchanged": 0.078125,
+   "stale_rate": 0.015625,
+   "by_distance": {
+    "0-256": [
+     0.609,
+     23
+    ],
+    "256-1024": [
+     0.369,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 5500,
+   "loss": 2.032780170440674,
+   "acc": 0.3984375,
+   "acc_updated": 0.71875,
+   "acc_unchanged": 0.078125,
+   "stale_rate": 0.0078125,
+   "by_distance": {
+    "0-256": [
+     0.696,
+     23
+    ],
+    "256-1024": [
+     0.369,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  {
+   "step": 6000,
+   "loss": 1.7182934284210205,
+   "acc": 0.4375,
+   "acc_updated": 0.71875,
+   "acc_unchanged": 0.15625,
+   "stale_rate": 0.0390625,
+   "by_distance": {
+    "0-256": [
+     0.826,
+     23
+    ],
+    "256-1024": [
+     0.399,
+     233
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.400390625,
+   "acc_updated": 0.677734375,
+   "acc_unchanged": 0.123046875,
+   "stale_rate": 0.0458984375,
+   "by_distance": {
+    "0-256": [
+     0.692,
+     195
+    ],
+    "256-1024": [
+     0.37,
+     1853
+    ],
+    "1024-4096": [
+     null,
+     0
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  },
+  "2048": {
+   "acc": 0.39111328125,
+   "acc_updated": 0.6513671875,
+   "acc_unchanged": 0.130859375,
+   "stale_rate": 0.0380859375,
+   "by_distance": {
+    "0-256": [
+     0.5,
+     4
+    ],
+    "256-1024": [
+     0.685,
+     203
+    ],
+    "1024-4096": [
+     0.359,
+     1841
+    ],
+    "4096-inf": [
+     null,
+     0
+    ]
+   }
+  }
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048
+  ],
+  "batch": 32,
+  "steps": 6000,
+  "eval_every": 500,
+  "eval_samples": 512,
+  "max_hours": 1.5
+ },
+ "micro_batch": null,
+ "seconds": 305.2
+}
